@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.calculator {
+    width: 320px;
+    padding: 20px;
+    border-radius: 20px;
+    background: #1e1e2e;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Anzeige */
+.display {
+    min-height: 100px;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 12px;
+    background: #11111b;
+    color: #fff;
+    text-align: right;
+    word-wrap: break-word;
+}
+
+.expression {
+    min-height: 24px;
+    font-size: 18px;
+    color: #a6adc8;
+}
+
+.current {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/* Tasten */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    height: 60px;
+    border: none;
+    border-radius: 12px;
+    background: #313244;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.1s;
+}
+
+.btn:hover {
+    background: #45475a;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.btn.function {
+    background: #585b70;
+}
+
+.btn.operator {
+    background: #fab387;
+    color: #11111b;
+}
+
+.btn.operator:hover {
+    background: #f9c49f;
+}
+
+.btn.equals {
+    background: #a6e3a1;
+    color: #11111b;
+}
+
+.btn.equals:hover {
+    background: #bdeeb9;
+}
+
+/* Taste 0 ist zwei Spalten breit */
+.btn.zero {
+    grid-column: span 2;
+}
